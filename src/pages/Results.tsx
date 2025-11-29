@@ -1,3 +1,4 @@
+import { useSearchParams } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
@@ -11,6 +12,9 @@ import { CheckCircle2, XCircle, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
 
 const Results = () => {
+  const [searchParams] = useSearchParams();
+  const reconId = searchParams.get("id") || "recon-001";
+
   const summaryStats = {
     totalRows: 1500,
     reconciled: 1450,
@@ -81,7 +85,7 @@ const Results = () => {
             Reconciliation Results
           </h1>
           <p className="mt-2 text-muted-foreground">
-            Review matched transactions and exceptions
+            Review matched transactions and exceptions {reconId && `(ID: ${reconId})`}
           </p>
         </div>
 
