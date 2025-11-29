@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        upload: {
+          zone: "hsl(var(--upload-zone))",
+          border: "hsl(var(--upload-zone-border))",
+          hover: "hsl(var(--upload-zone-hover))",
+        },
+        header: {
+          bg: "hsl(var(--header-bg))",
+          border: "hsl(var(--header-border))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
