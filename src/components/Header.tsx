@@ -48,8 +48,8 @@ const Header = () => {
         
         <div className="flex items-center gap-3">
           <div className="text-right">
-            <p className="text-sm font-medium text-foreground">Sarah Chen</p>
-            <p className="text-xs text-muted-foreground">Finance Manager</p>
+            <p className="text-sm font-medium text-foreground">Hardik Miglani</p>
+            <p className="text-xs text-muted-foreground">Admin</p>
           </div>
           <Avatar className="h-10 w-10 border-2 border-border">
             <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" alt="Sarah Chen" />
