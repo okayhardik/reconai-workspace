@@ -1,9 +1,13 @@
+import { useState } from "react";
 import FileUploadZone from "./FileUploadZone";
+import SchemaAnalysisModal from "./SchemaAnalysisModal";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
 
 const ReconciliationWorkspace = () => {
+  const [showSchemaModal, setShowSchemaModal] = useState(false);
+
   return (
     <div className="container mx-auto max-w-7xl px-6 py-12">
       <div className="mb-8 text-center">
@@ -39,12 +43,18 @@ const ReconciliationWorkspace = () => {
       <div className="mt-8 flex justify-center">
         <Button
           size="lg"
+          onClick={() => setShowSchemaModal(true)}
           className="group gap-2 bg-accent px-8 text-accent-foreground hover:bg-accent/90 hover:shadow-lg"
         >
           <Sparkles className="h-5 w-5 transition-transform group-hover:scale-110" />
-          Start Reconciliation
+          Simulate Upload
         </Button>
       </div>
+
+      <SchemaAnalysisModal 
+        open={showSchemaModal} 
+        onOpenChange={setShowSchemaModal}
+      />
     </div>
   );
 };
