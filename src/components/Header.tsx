@@ -13,7 +13,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight text-foreground">ReconAI</h1>
-              <p className="text-xs text-muted-foreground">Financial Reconciliation</p>
+              <p className="text-xs text-muted-foreground">By Kodo</p>
             </div>
           </div>
 
