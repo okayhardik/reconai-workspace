@@ -1,18 +1,38 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Database } from "lucide-react";
+import { NavLink } from "./NavLink";
 
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-header-border bg-header-bg/95 backdrop-blur supports-[backdrop-filter]:bg-header-bg/60">
       <div className="container flex h-16 items-center justify-between px-6">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
-            <Database className="h-6 w-6 text-accent-foreground" />
+        <div className="flex items-center gap-8">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
+              <Database className="h-6 w-6 text-accent-foreground" />
+            </div>
+            <div>
+              <h1 className="text-xl font-bold tracking-tight text-foreground">ReconAI</h1>
+              <p className="text-xs text-muted-foreground">Financial Reconciliation</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-xl font-bold tracking-tight text-foreground">ReconAI</h1>
-            <p className="text-xs text-muted-foreground">Financial Reconciliation</p>
-          </div>
+
+          <nav className="flex items-center gap-1">
+            <NavLink
+              to="/"
+              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              activeClassName="text-foreground"
+            >
+              Workspace
+            </NavLink>
+            <NavLink
+              to="/results"
+              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              activeClassName="text-foreground"
+            >
+              Results
+            </NavLink>
+          </nav>
         </div>
         
         <div className="flex items-center gap-3">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Dialog,
   DialogContent,
@@ -24,6 +25,7 @@ interface SchemaAnalysisModalProps {
 
 const SchemaAnalysisModal = ({ open, onOpenChange }: SchemaAnalysisModalProps) => {
   const [isAnalyzing, setIsAnalyzing] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (open) {
@@ -108,7 +110,10 @@ const SchemaAnalysisModal = ({ open, onOpenChange }: SchemaAnalysisModalProps) =
               <Button
                 size="lg"
                 className="gap-2"
-                onClick={() => onOpenChange(false)}
+                onClick={() => {
+                  onOpenChange(false);
+                  navigate("/results");
+                }}
               >
                 Confirm & Run Recon
               </Button>
